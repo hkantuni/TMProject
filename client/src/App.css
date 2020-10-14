@@ -1,0 +1,260 @@
+body,
+.container,
+.jumbotron {
+  background-color: #dddddd;
+  max-width: 98%;
+}
+
+ul {
+  padding-left: 10px;
+}
+
+.form-header,
+.display-4,
+.display-3,
+.lead,
+.tp {
+  text-align: center;
+}
+.btn-color {
+  background-color: #212529;
+  color: white;
+  margin-left: 20px;
+}
+
+.display-3 {
+  font-size: x-large;
+}
+
+.centered {
+  margin-top: 150px;
+}
+
+.jumboregister,
+.jumboform {
+  margin-top: 30px;
+  max-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-header {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 0px;
+}
+
+.fas {
+  margin-left: 500px;
+}
+
+.login-form .form-group,
+.register-form .form-group {
+  margin: 16px auto;
+  width: 500px;
+}
+
+.middle {
+  margin-top: 30px;
+}
+
+.login-form .form-group.lower,
+.register-form .form-group.lower {
+  margin-top: 32px;
+}
+.register-form {
+  margin-top: 120px;
+}
+
+.fa-6x,
+.fa-4x,
+.fa-3x {
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+.timepage-image {
+  margin-top: 40px;
+}
+.thead-font {
+  font-weight: 250 !important;
+}
+
+.myFooter {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2.5rem;
+}
+
+.btn-form {
+  margin-left: 660px;
+}
+
+.tp-image {
+  margin-left: 880px;
+  margin-top: 50px;
+}
+.tp-imagetimepage {
+  margin-left: 710px;
+  margin-top: 50px;
+}
+.tp-imageuser {
+  margin-left: 450px;
+  margin-top: 50px;
+}
+
+.ul-small {
+  border-top: 1px solid gray;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+  margin-bottom: 0;
+  margin-left: 200px;
+  margin-right: 200px;
+  font-size: 1rem;
+}
+
+.ul-small-1 {
+  border-top: 1px solid gray;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+  border-bottom: 1px solid gray;
+  margin-bottom: 0;
+  margin-left: 200px;
+  margin-right: 200px;
+  font-size: 1rem;
+}
+
+.add,
+.log {
+  margin-left: 20px;
+  vertical-align: none;
+}
+.log1 {
+  display: inline;
+  vertical-align: none;
+}
+
+.ul-small-top {
+  margin-top: 100px;
+}
+
+.center {
+  text-align: center;
+}
+
+.table {
+  margin-bottom: 100px;
+}
+
+.redirect-message {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.wrap {
+  word-wrap: normal;
+  width: 100px;
+}
+
+.comment {
+  width: 400px;
+}
+
+.timepage-container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+
+.dateworked {
+  width: 120px;
+}
+
+.edit-del {
+  width: 50px;
+}
+
+.num {
+  width: 30px;
+}
+
+.worktopic {
+  width: 300px;
+}
+
+.filter {
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+}
+
+.filterdate {
+  display: inline;
+  margin: 0px;
+  padding: 0px;
+}
+
+.datefilter {
+  margin-left: 20px;
+  margin-bottom: 5px;
+  width: 180px;
+}
+
+.datefiltertop {
+  margin-left: 20px;
+  width: 180px;
+}
+
+.datefilterbtn {
+  margin-bottom: 5px;
+  width: 80px;
+  margin-left: 10px;
+}
+
+.log {
+  margin-bottom: 50px;
+}
+
+.copy-wright {
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.filterform {
+  width: 300px;
+}
+
+.filterdiv {
+  display: inline-block;
+  margin-left: 30px;
+}
+
+.afirstname,
+.alastname {
+  width: 300px;
+}
+
+.ausername {
+  width: 150px;
+}
+
+.auserpage {
+  width: 60%;
+}
+
+.userformcb {
+  display: inline-block;
+}
+
+.userformlb {
+  display: inline-block;
+  margin-right: 50px;
+}
+.vert-align {
+  vertical-align: top;
+}
