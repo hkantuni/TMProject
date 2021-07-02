@@ -7,6 +7,8 @@ import "materialize-css";
 import "./App.css";
 import { AuthContext } from "./context/AuthContext";
 
+export const API_URL = "https://mysterious-retreat-90473.herokuapp.com";
+
 function App() {
   const { token, login, logout, userId, userRole } = useAuth();
   const isAuthenticated = !!token;

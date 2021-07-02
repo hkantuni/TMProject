@@ -5,6 +5,7 @@ import { Footer } from "../components/Footer";
 import { AuthContext } from "../context/AuthContext";
 import { useHttp } from "../hooks/http.hook";
 import { useMessage } from "../hooks/message.hook";
+import { API_URL } from "../App";
 
 export const Timepage = () => {
   const [userData, setUserData] = useState([]);
@@ -18,7 +19,7 @@ export const Timepage = () => {
 
   const getData = useCallback(
     async (filter) => {
-      let url = "/api/data?";
+      let url = API_URL + "/api/data?";
       if (filter && filter.filterByDate) {
         url += "dateFrom=" + filter.dateFrom + "&dateTo=" + filter.dateTo;
       }
@@ -67,7 +68,7 @@ export const Timepage = () => {
 
   const deleteHandler = async (recordId) => {
     // Send an delete request
-    await fetch("/api/data/" + recordId, {
+    await fetch(API_URL + "/api/data/" + recordId, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

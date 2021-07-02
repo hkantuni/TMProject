@@ -1,6 +1,4 @@
 {
-  "port": 5000,
-  "jwtSecret": "JWT_SECRET",
-  "mongoUri": "MONGO_URI",
-  "baseURL": "http://localhost:5000"
+  "jwtSecret": "Mertun es paroli code na",
+  "mongoUri": "  mongodb+srv://hovik:123zxc@cluster0.efx1r.azure.mongodb.net/MERN_TIME_DB?retryWrites=true&w=majority"
 }

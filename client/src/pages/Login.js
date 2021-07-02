@@ -4,6 +4,7 @@ import { useHttp } from "../hooks/http.hook";
 import { useMessage } from "../hooks/message.hook";
 import { AuthContext } from "../context/AuthContext";
 import { useHistory } from "react-router-dom";
+import { API_URL } from "../App";
 
 export const Login = () => {
   const auth = useContext(AuthContext);
@@ -26,7 +27,9 @@ export const Login = () => {
 
   const loginHandler = async () => {
     try {
-      const data = await request("/api/auth/login", "POST", { ...form });
+      const data = await request(API_URL + "/api/auth/login", "POST", {
+        ...form,
+      });
       auth.login(data.token, data.userId, data.userRole);
       history.push("/");
     } catch (e) {}

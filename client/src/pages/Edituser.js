@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useHistory, useParams, Link } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
+import { API_URL } from "../App";
 
 export const Edituser = () => {
   const auth = useContext(AuthContext);
@@ -22,7 +23,7 @@ export const Edituser = () => {
       try {
         setLoading(true);
         setError(undefined);
-        const response = await fetch("/api/user/editusers/" + id, {
+        const response = await fetch(API_URL + "/api/user/editusers/" + id, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -49,7 +50,7 @@ export const Edituser = () => {
     e.preventDefault();
 
     // Send an update request
-    await fetch("/api/user/edituser/" + id, {
+    await fetch(API_URL + "/api/user/edituser/" + id, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

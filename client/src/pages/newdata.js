@@ -4,6 +4,7 @@ import { Link, useHistory } from "react-router-dom";
 import { useAuth } from "../hooks/auth.hook";
 import { useHttp } from "../hooks/http.hook";
 import { useMessage } from "../hooks/message.hook";
+import { API_URL } from "../App";
 
 export const Newdata = () => {
   const { token } = useAuth();
@@ -31,7 +32,7 @@ export const Newdata = () => {
   const newDataHandler = async () => {
     try {
       const data = await request(
-        "/api/data/timepage",
+        API_URL + "/api/data/timepage",
         "POST",
         { ...form },
         { Authorization: "Bearer " + token }

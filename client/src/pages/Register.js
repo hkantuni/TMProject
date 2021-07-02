@@ -4,6 +4,7 @@ import { useHistory } from "react-router-dom";
 import { Footer } from "../components/Footer";
 import { useHttp } from "../hooks/http.hook";
 import { useMessage } from "../hooks/message.hook";
+import { API_URL } from "../App";
 
 export const Register = () => {
   const history = useHistory();
@@ -28,7 +29,9 @@ export const Register = () => {
 
   const registerHandler = async () => {
     try {
-      const data = await request("/api/auth/register", "POST", { ...form });
+      const data = await request(API_URL + "/api/auth/register", "POST", {
+        ...form,
+      });
       history.push("/login");
       message(data.message);
     } catch (e) {}

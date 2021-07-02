@@ -7,7 +7,7 @@ export const Home = () => {
       <div className="container">
         <i className="fas fa-business-time fa-6x"></i>
         <h1 className="display-4">Time Management System</h1>
-        <p className="lead">Keep you working time correctly and securely!</p>
+        <p className="lead">Manage your time cleanly and securely!</p>
         <hr className="my-4" />
         <p className="lead">
           <a className="btn btn-dark log" href="/register" role="button">

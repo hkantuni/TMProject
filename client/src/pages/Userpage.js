@@ -5,6 +5,7 @@ import { Footer } from "../components/Footer";
 import { AuthContext } from "../context/AuthContext";
 import { useHttp } from "../hooks/http.hook";
 import { useMessage } from "../hooks/message.hook";
+import { API_URL } from "../App";
 
 export const Userpage = () => {
   const [userData, setUserData] = useState([]);
@@ -16,7 +17,7 @@ export const Userpage = () => {
 
   const getData = useCallback(
     async (filter) => {
-      let url = "/api/user/userpage?";
+      let url = API_URL + "/api/user/userpage?";
 
       if (filter && filter.filterByEmail) {
         url += "email=" + filter.email;
@@ -55,7 +56,7 @@ export const Userpage = () => {
   };
 
   const deleteHandler = async (recordId) => {
-    await fetch("/api/user/userpage/" + recordId, {
+    await fetch(API_URL + "/api/user/userpage/" + recordId, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useHistory, useParams, Link } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
+import { API_URL } from "../App";
 
 export const EditData = () => {
   const auth = useContext(AuthContext);
@@ -21,8 +22,8 @@ export const EditData = () => {
 
       try {
         setLoading(true);
-        setError({});
-        const response = await fetch("/api/data/" + id, {
+        setError(undefined);
+        const response = await fetch(API_URL + "/api/data/" + id, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -45,20 +46,24 @@ export const EditData = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    await fetch("/api/data/" + id, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: "Bearer " + auth.token,
-      },
-      body: JSON.stringify(data),
-    });
-    history.push("/");
+    try {
+      await fetch(API_URL + "/api/data/" + id, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "Bearer " + auth.token,
+        },
+        body: JSON.stringify(data),
+      });
+      history.push("/");
+    } catch (err) {
+      setError(err);
+    }
   };
 
   return (
     <div className="jumbotron centered jumboform" style={{ width: "40%" }}>
+      {error && <p>{error.message}</p>}
       <h1 className="form-header">Please update info you want to edit</h1>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
@@ -95,7 +100,10 @@ export const EditData = () => {
             type="number"
             value={data ? data.prefferedWorkingHoursPerDay : ""}
             onChange={(e) => {
-              setData({ ...data, prefferedWorkingHoursPerDay: e.target.value });
+              setData({
+                ...data,
+                prefferedWorkingHoursPerDay: e.target.value,
+              });
             }}
             className=" form-control"
             name="prefferedWorkingHoursPerDay"
